@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\addtolength{\headheight}{-3cm}
+\addtolength{\textheight}{7cm}
+\addtolength{\oddsidemargin}{-2cm}
+\addtolength{\textwidth}{4cm}
+
+\parindent0cm
+
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{url}
+
+\pagestyle{empty}
+
+\newcommand{\abox}{\raisebox{.6ex}[0ex][0ex]{\fbox{\phantom{\rule{.8ex}{.8ex}}}}}
+
+\begin{document}
+
+\begin{center}
+TSLL TechXplorations 2017\\
+\textbf{TextFeaturesExtractor: Python tool for text mining and corpus analysis}
+\\  Contributors: Sowmya Vajjala and Sagnik Banerjee
+\\ Iowa State University, USA
+\\ (tool under development)
+\end{center}
+
+\paragraph{Background: } We are developing a small tool (command line interface, not graphical) to extract different kinds of textual features such as word, part-of-speech sequences and their frequencies and frequencies of various syntactic relations in a text, and we support different forms of pre-processing (stemming, spelling correction etc.). 
+
+The goal of the tool is two-fold: 
+\begin{enumerate}
+\item support more linguistic corpus analysis 
+\item support text mining researchers by providing a suite of text features they can use to benchmark text classification. 
+The tool is still under development, and is currently seen as a single large python file with some documentation. Our goal is to release the code for public use by December.
+\end{enumerate}
+
+\paragraph{3 Takeaways from this session}
+\begin{enumerate}
+\item learning about how to extract different kinds of textual features beyond words and word sequences
+\item walking through the process of how to extract such features
+\item sharing the python code so that enthusiastic people can try to use it and give feedback for future improvement of the tool
+\end{enumerate}
+
+Current version of the code is available for download at: \url{https://goo.gl/gRF4X9}
+
+\paragraph{Currently supported features (for any text file)}
+\begin{itemize}
+\item Extraction of word, character and POS n-grams for any n- and their frequencies
+\item Skip grams (i.e., n-grams with gaps)
+\item Word-POS mixed n-gram representations
+\item Perform phrase level chunking and syntactic (dependency) parsing and collect frequencies of most common syntactic structures
+\item Pre-processing: lowercasing, stemming, spelling correction, stop word removal
+\end{itemize}
+
+\paragraph{Planned Extensions: }
+\begin{itemize}
+\item Working on folders containing many files
+\item Storing output in human readable formats
+\item Storing output to be used as input for text mining and machine learning algorithms
+\item Add support for vectorized representations of words, beyond n-grams
+\end{itemize}
+
+\paragraph{contact: } sowmya@iastate.edu
+\end{document}
